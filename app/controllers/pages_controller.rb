@@ -3,5 +3,10 @@ class PagesController < ApplicationController
 	#inherits code from application controller and uses it's own code
   def home
   end
+
+  def about 
+  end
+
   
+
 end
