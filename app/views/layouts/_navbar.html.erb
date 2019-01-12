@@ -11,7 +11,8 @@
     
 
       
-       <a class="navbar-brand" href="#"><i class="fa fa-tasks" aria-hidden="true"></i> Wonderlst</a>
+       
+       <%= link_to '<i class="fa fa-tasks" aria-hidden="true"></i> Wonderlst'.html_safe, root_path, class: 'navbar-brand'%>
       
 
     </div>
@@ -21,7 +22,13 @@
       
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+      <%if current_user %>  
+        <li><%= link_to 'Account Settings', edit_user_registration_path %></li>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete%></li>
+        <% else %>
+        <li><%= link_to 'About', about_path%></li>
+        <li><%= link_to 'Log in', new_user_session_path%></li>
+        <%end%>
         <li class="dropdown">
           
           <ul class="dropdown-menu">
