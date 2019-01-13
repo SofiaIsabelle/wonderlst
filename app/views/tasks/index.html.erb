@@ -1,0 +1,16 @@
+<h2>Wonderlst </h2>
+
+<table>
+	<p><strong><%= link_to 'New Task', new_task_path %></strong></p>
+	<tr>
+		<th></th>
+	</tr>
+    
+	<% @tasks.each do |task| %>
+		<tr>
+			<td><%= task.content %></td>
+			<td><%= link_to 'Show', task_path(task)%></td>
+			<td><%= link_to 'Edit', edit_task_path(task)%></td>
+		</tr>	
+	<% end %>	
+</table>
