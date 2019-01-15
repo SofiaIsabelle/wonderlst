@@ -9,16 +9,10 @@
 		<th colspan="4"></th>
 	</tr>
     
-	<% @to_do.each do |task| %>
-		<tr>
-			<td><%= task.content %></td>
-			<td><%= task.state %></td>
-			<td><%= link_to ' Show ', task_path(task)%></td>
-			<td><%= link_to ' Edit ', edit_task_path(task)%></td>
-			<td><%= link_to ' Delete ', task_path(task), method: :delete, data: { confirm: " Sure to remove Wonderlst task ? " }%></td>
-			<td><%= link_to ' Doing ', change_task_path(task, state: "doing"), method: :put %></td>
-		</tr>	
-	<% end %>	
+	
+	<%=render @to_do %>
+		
+	
 </table>
 
 <h3>Doing</h3>
@@ -31,17 +25,9 @@
 		<th colspan="5"></th>
 	</tr>
     
-	<% @doing.each do |task| %>
-		<tr>
-			<td><%= task.content %></td>
-			<td><%= task.state %></td>
-			<td><%= link_to 'Show', task_path(task)%></td>
-			<td><%= link_to 'Edit', edit_task_path(task)%></td>
-			<td><%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: " Sure to remove Wonderlst task ? " }%></td>
-			<td><%= link_to 'Done', change_task_path(task, state: "done"), method: :put %></td>
-
-		</tr>	
-	<% end %>	
+	
+	<%=render @doing %>	
+	
 </table>
 
 <h3>Done</h3>
@@ -53,13 +39,6 @@
 		<thcolspan="4"></th>
 	</tr>
     
-	<% @done.each do |task| %>
-		<tr>
-			<td><%= task.content %></td>
-			<td><%= task.state %></td>
-			<td><%= link_to 'Show', task_path(task)%></td>
-			<td><%= link_to 'Edit', edit_task_path(task)%></td>
-			<td><%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: " Sure to remove Wonderlst task ? " }%></td>
-		</tr>	
-	<% end %>	
+	<%=render @done %>
+
 </table>
