@@ -1,14 +1,56 @@
-<h2>Wonderlst </h2>
+<h2>Wonderlst Tasks </h2>
 
 <table>
 	<p><strong><%= link_to 'New Task', new_task_path %></strong></p>
 	<tr>
+		
 		<th></th>
+		<th>State</th>
 	</tr>
     
-	<% @tasks.each do |task| %>
+	<% @to_do.each do |task| %>
 		<tr>
 			<td><%= task.content %></td>
+			<td><%= task.state %></td>
+			<td><%= link_to 'Show', task_path(task)%></td>
+			<td><%= link_to 'Edit', edit_task_path(task)%></td>
+			<td><%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: " Sure to remove Wonderlst task ? " }%></td>
+		</tr>	
+	<% end %>	
+</table>
+
+<h3>Doing</h3>
+
+<table>
+	
+	<tr>
+		<th>Task </th>
+		<th>State</th>
+	</tr>
+    
+	<% @doing.each do |task| %>
+		<tr>
+			<td><%= task.content %></td>
+			<td><%= task.state %></td>
+			<td><%= link_to 'Show', task_path(task)%></td>
+			<td><%= link_to 'Edit', edit_task_path(task)%></td>
+			<td><%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: " Sure to remove Wonderlst task ? " }%></td>
+		</tr>	
+	<% end %>	
+</table>
+
+<h3>Done</h3>
+
+<table>
+	<tr>
+        <th>Task </th>
+		<th>State</th>
+	</tr>
+    
+	<% @done.each do |task| %>
+		<tr>
+			<td><%= task.content %></td>
+			<td><%= task.state %></td>
 			<td><%= link_to 'Show', task_path(task)%></td>
 			<td><%= link_to 'Edit', edit_task_path(task)%></td>
 			<td><%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: " Sure to remove Wonderlst task ? " }%></td>
