@@ -1,44 +1,20 @@
-<h2>Wonderlst</h2>
-
-<table>
-	<p><strong><%= link_to 'New Task', new_task_path %></strong></p>
-	<tr>
-		
-		<th>Task</th>
-		<th>State</th>
-		<th colspan="4"></th>
-	</tr>
-    
+<p><strong><%= link_to 'New Task', new_task_path %></strong></p>
 	
-	<%=render @to_do %>
-		
-	
-</table>
+	<div class = 'row'>
 
-<h3>Doing</h3>
+	<div class = 'col-md-4'>
+		<h1 class='text-center'><em>TASKS</em></h1>
+		<%=render @to_do %>
+	</div>
 
-<table>
-	
-	<tr>
-		<th>Task </th>
-		<th>State</th>
-		<th colspan="5"></th>
-	</tr>
-    
-	
-	<%=render @doing %>	
-	
-</table>
+	<div class = 'col-md-4'>
+		<h1 class='text-center'><em>DOING</em></h1>
+		<%=render @doing %>
+	</div>
 
-<h3>Done</h3>
+	<div class = 'col-md-4'>
+		<h1 class='text-center'><em>DONE</em></h1>
+		<%=render @done %>
+	</div>
 
-<table>
-	<tr>
-        <th>Task </th>
-		<th>State</th>
-		<thcolspan="4"></th>
-	</tr>
-    
-	<%=render @done %>
-
-</table>
+	</div>	
