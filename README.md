@@ -1,27 +1,30 @@
-# README
+# Wonderlst
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ Trello App Clone created using Ruby on Rails 
 
-Things you may want to cover:
+ Used as a quick review for RoR , my favorite programming language <3
 
-* Ruby version
+## Instructions to create App 
 
-* System dependencies
+* This is for creating you app in your local environment , so ensure that you have compatible versions of RoR installed locally
 
-* Configuration
+* rails new Wonderlst 
 
-* Database creation
+* bundle install : goes into http://rubygems.org/ to fetch ruby gems which you can think of as prepackaged solutions that you can plugin  
+  to your application that are open to a range of functionalities. (installs the basic gems that any RoR app would need to get started)
 
-* Database initialization
+* Basic Rails Architecture : MVC (Model , View , Controller)
 
-* How to run the test suite
+* Model : maintains the relationship between Object and Database , and handles the validations, associations and transactions
 
-* Services (job queues, cache servers, search engines, etc.)
+* View : html.erb (HTML), hence what is visible to the client. A presentation of data in a particular format , TRIGGERED by a controller's 
+         decision to present the data
 
-* Deployment instructions
+* Controller : the controller directs the traffic of an application. On one hand it queries the model for specific data , and on the other hand 
+               it organizes this data (searching , sorting , etc.) in a form that fits the needs of the associated VIEW. Controller is el MAESTRO. 
 
-* ...
+* To be continued ........
 
-* naming conventions in rails (look it up)
-# wonderlst
+* 
+
+* 
